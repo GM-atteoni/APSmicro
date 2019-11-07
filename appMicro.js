@@ -8,6 +8,9 @@ const wss = new WebSocket.Server({ port: 8080 })
 
 //Quando algum cliente se conectar
 wss.on('connection', ws => {
+    ws.on('message', function(message) {
+        console.log(message);
+    })
     console.log('Cliente conectado ao servidor WebSocket');
     ws.send('Aguardando arduino')
 }) 
@@ -42,7 +45,6 @@ function initPort(){
 
         if(wss.clients.size > 0){
             console.log('Enviando mensagem para o cliente...')
-            console.log(dados.toString('utf8'));
             //Itera os clientes e envia a mensagem
             wss.clients.forEach(function each(client) {
                 if (client.readyState === WebSocket.OPEN) {

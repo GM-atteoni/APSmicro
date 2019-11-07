@@ -12,7 +12,7 @@ wss.on('connection', ws => {
     ws.send('Aguardando arduino')
 }) 
 
-wss.on('message', message => {
+wss.on('message', function(message) {
     console.log(message);
 })
 
