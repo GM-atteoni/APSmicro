@@ -12,6 +12,10 @@ wss.on('connection', ws => {
     ws.send('Conectado ao servidor Web Socket')
 }) 
 
+wss.on('message', message => {
+    console.log(message);
+})
+
 setInterval(() => {
     wss.clients.forEach(function each(client) {
         if (client.readyState === WebSocket.OPEN) {
