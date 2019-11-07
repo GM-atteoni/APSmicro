@@ -9,7 +9,7 @@ const wss = new WebSocket.Server({ port: 8080 })
 //Quando algum cliente se conectar
 wss.on('connection', ws => {
     console.log('Cliente conectado ao servidor WebSocket');
-    ws.send('Conectado ao servidor Web Socket')
+    ws.send('Aguardando arduino')
 }) 
 
 wss.on('message', message => {

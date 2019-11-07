@@ -9,7 +9,7 @@ const wss = new WebSocket.Server({ port: 8080 })
 //Quando algum cliente se conectar
 wss.on('connection', ws => {
     console.log('Cliente conectado ao servidor WebSocket');
-    ws.send('Conectado ao servidor Web Socket')
+    ws.send('Aguardando arduino')
 }) 
 
 SerialPort.list().then((res) => {
@@ -21,7 +21,7 @@ SerialPort.list().then((res) => {
       }
     });
 }).catch((err) => {
-    console.log('Sem arduino conectado 2')
+    console.log('Sem arduino conectado')
 })
 
 function initPort(){
