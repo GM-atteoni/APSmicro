@@ -10,7 +10,7 @@ const wss = new WebSocket.Server({ port: 8080 })
 wss.on('connection', ws => {
     console.log('Cliente conectado ao servidor WebSocket');
     ws.send('Conectado ao servidor Web Socket')
-})
+}) 
 
 setInterval(() => {
     wss.clients.forEach(function each(client) {
