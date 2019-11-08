@@ -5,8 +5,8 @@ int frequencia;
 
 dht DHT;
 
-char* musica[] = {"La","Re","La","Re","La","Re","La","Re", "Fim"}; 
-int duracao[] = {700, 500, 700, 500, 700, 500, 700, 500};
+char* musica[] = {"La","Re","Mi","Re","Sol","Re","Sol","Sol#", "Fim"}; 
+int duracao[] = {300, 300, 200, 500, 200, 300, 200, 200};
 
 void setup() {
   Serial.begin(9600);
